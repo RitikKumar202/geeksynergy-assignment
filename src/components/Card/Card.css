@@ -1,0 +1,146 @@
+.card {
+    width: 435px;
+    box-shadow: 0px 5px 17px 0px #0000001A;
+    margin: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;
+    position: relative;
+}
+
+.card-image {
+    width: 405px;
+    height: 264px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.like-icon {
+    background: #fff;
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.red-heart {
+    color: #ff0000;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.duration {
+    display: flex;
+    position: absolute;
+    top: 240px;
+    right: 45px;
+    padding: 10px 15px;
+    background: #fff;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+h3 {
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 700;
+    color: #323130;
+    margin: 10px 0;
+}
+
+.pickup {
+    display: flex;
+    gap: 10PX;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.pickup img {
+    width: 14px;
+    height: 14px;
+}
+
+.pickup p {
+    font-size: 14px;
+    line-height: 19px;
+    font-weight: 400;
+    color: #323130;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.price-start {
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 0.3%;
+    color: #323130;
+    font-weight: 400;
+}
+
+.pricing-detail {
+    position: relative;
+}
+
+.old-price {
+    font-size: 16px;
+    line-height: 22.4px;
+    color: #868686;
+    text-decoration: line-through;
+    letter-spacing: 0.3%;
+}
+
+.new-price {
+    color: #323130;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.3%;
+    margin-bottom: -18px;
+    margin-left: 6px;
+    position: absolute;
+    top: -8px;
+}
+
+.price-taxes {
+    color: #868686;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16.8px;
+    letter-spacing: 0.3%;
+    margin-top: 5px;
+}
+
+.view-details-btn {
+    width: 145px;
+    height: 45px;
+    border-radius: 10px;
+    color: #fff;
+    background: #DB2D2E;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 22px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
