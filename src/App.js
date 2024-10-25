@@ -3,6 +3,7 @@ import Card from './components/Card/Card';
 import Img1 from "./assets/img1.png";
 import Img2 from "./assets/img2.png";
 import Img3 from "./assets/img3.png";
+import { useState } from 'react';
 
 function App() {
   const cardsData = [
@@ -31,20 +32,37 @@ function App() {
       pickup: "Cochin Airport"
     }
   ];
+
+  const [search, setSearch] = useState("");
+
+  const filteredCards = cardsData.filter((card) =>
+    card.pickup.toLowerCase().includes(search.toLowerCase()));
+
   return (
-    <div className="card-container">
-      {cardsData.map((card, index) => (
-        <Card
-          key={index}
-          image={card.image}
-          title={card.title}
-          duration={card.duration}
-          price={card.price}
-          oldPrice={card.oldPrice}
-          pickup={card.pickup}
-        />
-      ))}
-    </div>
+    <>
+      <input
+        type="text"
+        placeholder='Search by pickup location'
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+      <div className="card-container">
+        {/* {cardsData.map((card, index) => (
+          <Card
+            key={index}
+            image={card.image}
+            title={card.title}
+            duration={card.duration}
+            price={card.price}
+            oldPrice={card.oldPrice}
+            pickup={card.pickup}
+          />
+        ))} */}
+        {filteredCards.map((card) => (
+          <Card key={card.title} {...card} />
+        ))}
+      </div>
+    </>
   );
 }
 
